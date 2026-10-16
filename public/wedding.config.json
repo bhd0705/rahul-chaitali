@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "Suraj & Libina — Our Forever Begins Together",
+    "description": "Celebrate the wedding of Suraj & Libina — 9th January, 2027, Kottayam, Kerala.",
+    "ogTitle": "Suraj & Libina — 9 Jan 2027",
+    "ogDescription": "Our Forever Begins Together."
+  },
+  "theme": {
+    "background": "#faf6ee",
+    "foreground": "#172846",
+    "primary": "#142c55",
+    "secondary": "#bfdcef",
+    "muted": "#ede7db",
+    "mutedForeground": "#405870",
+    "gold": "#c99d4e",
+    "goldSoft": "#dcc188",
+    "paper": "#fbf4e8",
+    "rsvpNavy": "#1a2c5b",
+    "rsvpGold": "#c0a062",
+    "sectionGray": "#e7ebf0"
+  },
+  "intro": {
+    "enabled": true,
+    "tapToOpenText": "TAP TO OPEN",
+    "videoUrl": "/assets/envelope-intro.mp4",
+    "posterImage": ""
+  },
+  "couple": {
+    "partner1Name": "Suraj",
+    "partner2Name": "Libina",
+    "wedsText": "Weds",
+    "monogramAlt": "S & L monogram",
+    "monogramImage": "/assets/monogram-DluBM9hV.webp",
+    "rsvpInitials": "S | L"
+  },
+  "hero": {
+    "tagline": "WE ARE GETTING MARRIED",
+    "saveTheDateLabel": "SAVE THE DATE",
+    "dateDisplay": "9th January 2027",
+    "countdownIso": "2027-01-09T15:00:00+05:30",
+    "location": "KOTTAYAM, KERALA",
+    "countdownTitle": "THE COUNTDOWN BEGINS",
+    "countdownFooter": "Until our forever begins",
+    "thankYouMessage": "Thank you for being a part of our special day.",
+    "scratchRevealEnabled": true,
+    "images": {
+      "mobile": "/assets/hero-bg-BoJZa16A.webp",
+      "desktop": "/assets/hero-bg-desktop-DVXVxfCH.webp"
+    }
+  },
+  "families": {
+    "eyebrow": "Two families. One promise.",
+    "title": "Introducing",
+    "titleScript": "the families",
+    "partner1": {
+      "name": "Suraj",
+      "relationLabel": "S/o",
+      "parents": "Cyril Philip & Soly Joseph",
+      "siblingLabel": "Brother of",
+      "siblings": "Dr. Sruthi Cyril & Sreya Cyril"
+    },
+    "partner2": {
+      "name": "Libina",
+      "relationLabel": "D/o",
+      "parents": "Scaria Joseph & Bindu Scaria",
+      "siblingLabel": "Sister of",
+      "siblings": "Leona Mary Scaria & Linett Mary Scaria"
+    },
+    "closingLine1": "Raised with love,\nunited by destiny,",
+    "closingLine2": "together forever",
+    "images": {
+      "mobile": "/assets/families-bg-Bdmrjm8V.webp",
+      "desktop": "/assets/families-bg-desktop-CemX6j0X.webp"
+    }
+  },
+  "story": {
+    "title": "OUR STORY",
+    "subtitle": "Some chapters are written by destiny.",
+    "quote": "From that first conversation to a lifetime of adventures",
+    "photos": [
+      { "src": "/assets/Storyboard-1-ROZeRR6g.webp", "alt": "Every journey led us here" },
+      { "src": "/assets/Storyboard-2-vMt0D-Xn.webp", "alt": "From adventures to forever" },
+      { "src": "/assets/Storyboard-3-CU__j4NP.webp", "alt": "We wrote our story. Now comes forever" },
+      { "src": "/assets/Storyboard-4-C9jvakjK.webp", "alt": "From miles apart to forever close" },
+      { "src": "/assets/Storyboard-5-CozcjNj1.webp", "alt": "Our best adventure begins now" },
+      { "src": "/assets/Storyboard-6-Dn8BwMkO.webp", "alt": "Our best adventure begins now" },
+      { "src": "/assets/Storyboard-7-BlXAwcZq.webp", "alt": "Our best adventure begins now" }
+    ],
+    "images": {
+      "mobile": "/assets/Storyboard-9-BPOwQluv.webp",
+      "desktop": "/assets/story-bg-desktop-CgovZBCa.webp"
+    }
+  },
+  "schedulePreWedding": {
+    "title": "SCHEDULE OF EVENTS",
+    "subtitle": "A CELEBRATION OF TRADITION,\nLOVE & FAMILY",
+    "cardImage": "/assets/schedule-card-1-DVLF0AQy.webp",
+    "cardAlt": "Chanthamcharth",
+    "images": {
+      "mobile": "/assets/schedule-bg-CrjkodkA.webp",
+      "desktop": "/assets/schedule-bg-desktop-DLqqgvTI.webp"
+    }
+  },
+  "wedding": {
+    "title": "SCHEDULE OF EVENTS",
+    "subtitle": "A CELEBRATION OF LOVE, FAITH & FOREVER",
+    "dateHeading": "9TH JANUARY, 2027",
+    "eventName": "Wedding",
+    "time": "3:00 PM",
+    "venueLabel": "Venue:",
+    "venueName": "St. Joseph's Church Pushpagiri\nKottayam",
+    "venueUrl": "https://maps.app.goo.gl/F1RsPp6k4SX69nKL9?g_st=iw",
+    "bibleQuote": "Therefore what God has joined together,\nlet no one separate.",
+    "bibleReference": "MATTHEW 19:6",
+    "decorativeImage": "/assets/wedding-content-DwkeZBGv.webp",
+    "images": {
+      "mobile": "/assets/wedding-bg-C8jmWq-L.webp",
+      "desktop": "/assets/wedding-bg-desktop--WTjG04H.webp"
+    }
+  },
+  "reception": {
+    "title": "SCHEDULE OF EVENTS",
+    "subtitle": "A CELEBRATION OF LOVE, FAITH & FOREVER",
+    "scheduleImage": "/assets/reception-content-BM7GeP99.webp",
+    "scheduleAlt": "Reception Schedule",
+    "images": {
+      "mobile": "/assets/reception-bg-Bhu2sMue.webp",
+      "desktop": "/assets/reception-bg-desktop-j3iMUPCn.webp"
+    }
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "nameLabel": "FULL NAME",
+    "namePlaceholder": "Enter your name",
+    "attendanceLabel": "WILL YOU BE ATTENDING?",
+    "acceptLabel": "Joyfully Accept",
+    "declineLabel": "Regretfully Decline",
+    "submitLabel": "SEND RSVP",
+    "footerMessage": "Celebrate this new chapter with us.",
+    "directionsLabel": "GET DIRECTIONS",
+    "directionsUrl": "https://maps.app.goo.gl/F1RsPp6k4SX69nKL9?g_st=iw",
+    "submitEndpoint": "",
+    "storeLocally": true,
+    "images": {
+      "mobile": "/assets/rsvp-bg-I-N3en4m.webp",
+      "desktop": "/assets/rsvp-bg-desktop-DWfTKjol.webp",
+      "cardShape": "/assets/rsvp-shape-z1pcPNfJ.webp"
+    }
+  },
+  "effects": {
+    "birds": true,
+    "petals": true
+  }
+}
