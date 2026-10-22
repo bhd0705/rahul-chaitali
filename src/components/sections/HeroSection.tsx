@@ -70,12 +70,12 @@ export function HeroSection({ config }: { config: WeddingConfig }) {
         <div
           className={`w-full transition-all duration-1000 transform ${showCountdown ? "opacity-100 max-h-[500px] mt-2" : "opacity-0 max-h-0 overflow-hidden pointer-events-none"}`}
         >
-          <div className="flex items-center justify-center gap-3 text-[var(--gold)] text-[0.65rem] sm:text-xs md:text-sm font-caps tracking-[0.25em] mb-2 md:mb-4">
+          <div className="flex items-center justify-center gap-3 text-[var(--foreground)] text-[0.65rem] sm:text-xs md:text-sm font-caps tracking-[0.25em] mb-2 md:mb-4">
             <span>⤙</span>
             <span>{hero.countdownTitle}</span>
             <span>⤚</span>
           </div>
-          <div className="flex items-center justify-center gap-4 py-3 px-1 md:py-5 md:px-6 border border-[var(--gold)]/30 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl max-w-[520px] mx-auto">
+          <div className="flex items-center justify-center gap-4 py-3 px-1 md:py-5 md:px-6 border border-[var(--gold)]/40 bg-[var(--paper)]/85 backdrop-blur-md rounded-xl md:rounded-2xl max-w-[520px] mx-auto">
             {(
               [
                 { k: "d" as const, label: "DAYS" },
@@ -85,10 +85,10 @@ export function HeroSection({ config }: { config: WeddingConfig }) {
               ] as const
             ).map((item, i) => (
               <div key={item.k} className="contents">
-                {i > 0 && <span className="h-8 md:h-12 w-[0.5px] bg-[var(--gold)]/30" />}
+                {i > 0 && <span className="h-8 md:h-12 w-[0.5px] bg-[var(--foreground)]/25" />}
                 <div className="flex-1 flex flex-col items-center">
-                  <span className="font-display text-2xl sm:text-3xl md:text-5xl font-semibold tabular-nums">{pad(countdown[item.k])}</span>
-                  <span className="font-caps text-[0.45rem] md:text-[0.65rem] tracking-widest text-[var(--gold)] mt-2">{item.label}</span>
+                  <span className="font-display text-[var(--foreground)] text-2xl sm:text-3xl md:text-5xl font-semibold tabular-nums">{pad(countdown[item.k])}</span>
+                  <span className="font-caps text-[0.45rem] md:text-[0.65rem] tracking-widest text-[var(--muted-foreground)] mt-2">{item.label}</span>
                 </div>
               </div>
             ))}
