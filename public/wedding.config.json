@@ -53,7 +53,7 @@
     "title": "Introducing",
     "titleScript": "the families",
     "partner1": {
-      "name": "Rahul Singh Rawat",
+      "name": "Rahul",
       "details": [
         { "label": "Father", "value": "Mr. Ravinder Singh Rawat" },
         { "label": "Mother", "value": "Mrs. Minakshi Rawat" },
@@ -61,7 +61,7 @@
       ]
     },
     "partner2": {
-      "name": "Chetali Rautela",
+      "name": "Chetali",
       "details": [
         { "label": "Father", "value": "Mr. Kulwant Singh Rautela" },
         { "label": "Mother", "value": "Mrs. Rita Rautela" },
