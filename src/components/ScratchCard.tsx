@@ -26,8 +26,50 @@ export function ScratchCard({
       canvas.height = rect.height;
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
-      ctx.fillStyle = "rgba(201, 157, 78, 0.85)";
+
+      const background = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      background.addColorStop(0, "#1d3b63");
+      background.addColorStop(0.55, "#2d5b8b");
+      background.addColorStop(1, "#3974a6");
+      ctx.fillStyle = background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "rgba(226, 190, 112, 0.72)";
+      const confetti = [
+        [0.08, 0.23, 1.4], [0.13, 0.7, 1], [0.2, 0.13, 1.3], [0.27, 0.82, 1.1],
+        [0.36, 0.17, 0.8], [0.64, 0.79, 1], [0.73, 0.17, 1.1], [0.83, 0.77, 1.4],
+        [0.9, 0.23, 1], [0.94, 0.63, 1.2], [0.57, 0.12, 0.8], [0.43, 0.86, 0.9],
+      ];
+      for (const [x, y, radius] of confetti) {
+        ctx.beginPath();
+        ctx.arc(canvas.width * x, canvas.height * y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      const centerX = canvas.width / 2;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillStyle = "#e8c477";
+      ctx.font = "16px Georgia, serif";
+      ctx.fillText("✦", centerX - 80, canvas.height * 0.43);
+      ctx.fillText("✦", centerX + 80, canvas.height * 0.43);
+      ctx.font = "500 14px 'Cormorant SC', Georgia, serif";
+      ctx.fillText("SCRATCH TO REVEAL", centerX, canvas.height * 0.43);
+      ctx.font = "italic 13px 'Cormorant Garamond', Georgia, serif";
+      ctx.fillStyle = "rgba(239, 226, 202, 0.9)";
+      ctx.fillText("our special day", centerX, canvas.height * 0.61);
+
+      ctx.strokeStyle = "rgba(226, 190, 112, 0.55)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(canvas.width * 0.08, canvas.height * 0.84);
+      ctx.quadraticCurveTo(canvas.width * 0.17, canvas.height * 0.91, canvas.width * 0.2, canvas.height * 0.96);
+      ctx.stroke();
+      ctx.fillStyle = "rgba(226, 190, 112, 0.6)";
+      ctx.beginPath();
+      ctx.ellipse(canvas.width * 0.12, canvas.height * 0.87, 8, 2.5, -0.5, 0, Math.PI * 2);
+      ctx.fill();
+
       ctx.globalCompositeOperation = "destination-out";
     };
     resize();
