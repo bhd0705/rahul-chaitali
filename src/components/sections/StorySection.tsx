@@ -26,13 +26,13 @@ export function StorySection({ config }: { config: WeddingConfig }) {
             ‹
           </button>
           <div className="relative w-[85%] max-w-sm animate-float-slow">
-            <div className="relative rotate-[-1.5deg] drop-shadow-xl">
+            <div className="relative aspect-[3/4] overflow-hidden bg-[var(--paper)] rotate-[-1.5deg] drop-shadow-xl">
               {photos.map((p, i) => (
                 <img
                   key={p.src}
                   src={p.src}
                   alt={p.alt}
-                  className={`w-full h-auto object-contain transition-opacity duration-300 ${i === index ? "opacity-100 relative" : "opacity-0 absolute inset-0"}`}
+                  className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-300 ${i === index ? "opacity-100" : "opacity-0"}`}
                 />
               ))}
             </div>

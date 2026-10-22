@@ -113,10 +113,12 @@ export interface WeddingConfig {
   };
 }
 
+export interface FamilyDetail {
+  label: string;
+  value: string;
+}
+
 export interface FamilyMember {
   name: string;
-  relationLabel: string;
-  parents: string;
-  siblingLabel: string;
-  siblings: string;
+  details: FamilyDetail[];
 }

@@ -6,16 +6,18 @@ function FamilyColumn({ member, variant }: { member: WeddingConfig["families"]["
   return (
     <Reveal variant={variant === "left" ? "left" : "right"} delayMs={200}>
       <div className="flex flex-col items-center text-center px-1">
-        <h3 className="font-script text-3xl sm:text-4xl md:text-5xl text-[var(--primary)] leading-none italic">{member.name}</h3>
+        <h3 className="font-script text-3xl sm:text-4xl md:text-5xl text-[var(--primary)] leading-tight italic">{member.name}</h3>
         <div className="flex items-center justify-center gap-1.5 my-2 opacity-70">
           <span className="h-[0.5px] w-6 bg-gradient-to-r from-transparent to-[var(--gold)]" />
           <span className="text-[var(--gold)] text-[6px]">✦</span>
           <span className="h-[0.5px] w-6 bg-gradient-to-l from-transparent to-[var(--gold)]" />
         </div>
-        <p className="font-caps text-[0.4rem] sm:text-[0.45rem] tracking-[0.2em] text-[var(--muted-foreground)] mb-1 uppercase font-semibold">{member.relationLabel}</p>
-        <p className="font-display text-[0.65rem] sm:text-sm text-[var(--primary)] tracking-wide uppercase font-semibold">{member.parents}</p>
-        <p className="font-caps text-[0.4rem] sm:text-[0.45rem] tracking-[0.2em] text-[var(--muted-foreground)] mt-3 mb-1 uppercase font-semibold">{member.siblingLabel}</p>
-        <p className="font-display text-[0.6rem] sm:text-xs text-[var(--muted-foreground)] tracking-wide leading-tight uppercase font-semibold whitespace-pre-line">{member.siblings}</p>
+        {member.details.map((detail) => (
+          <div key={detail.label} className="mt-3 first:mt-0">
+            <p className="font-caps text-[0.4rem] sm:text-[0.45rem] tracking-[0.2em] text-[var(--muted-foreground)] mb-1 uppercase font-semibold">{detail.label}</p>
+            <p className="font-display text-[0.6rem] sm:text-xs text-[var(--primary)] tracking-wide leading-tight uppercase font-semibold whitespace-pre-line">{detail.value}</p>
+          </div>
+        ))}
       </div>
     </Reveal>
   );

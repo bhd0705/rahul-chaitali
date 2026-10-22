@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Suraj & Libina — Our Forever Begins Together",
-    "description": "Celebrate the wedding of Suraj & Libina — 9th January, 2027, Kottayam, Kerala.",
-    "ogTitle": "Suraj & Libina — 9 Jan 2027",
+    "title": "Rahul & Chetali — Our Forever Begins Together",
+    "description": "Celebrate the wedding of Rahul Singh Rawat & Chetali Rautela — 24th November, 2026, Polo Luxurious Destination, New Delhi.",
+    "ogTitle": "Rahul & Chetali — 24 Nov 2026",
     "ogDescription": "Our Forever Begins Together."
   },
   "theme": {
@@ -26,19 +26,19 @@
     "posterImage": ""
   },
   "couple": {
-    "partner1Name": "Suraj",
-    "partner2Name": "Libina",
+    "partner1Name": "Rahul",
+    "partner2Name": "Chetali",
     "wedsText": "Weds",
-    "monogramAlt": "S & L monogram",
-    "monogramImage": "/assets/monogram-DluBM9hV.webp",
-    "rsvpInitials": "S | L"
+    "monogramAlt": "R & C monogram",
+    "monogramImage": "/assets/monogram-DluBM9hV.png",
+    "rsvpInitials": "R | C"
   },
   "hero": {
     "tagline": "WE ARE GETTING MARRIED",
     "saveTheDateLabel": "SAVE THE DATE",
-    "dateDisplay": "9th January 2027",
-    "countdownIso": "2027-01-09T15:00:00+05:30",
-    "location": "KOTTAYAM, KERALA",
+    "dateDisplay": "24th November 2026",
+    "countdownIso": "2026-11-24T19:00:00+05:30",
+    "location": "DWARKA, NEW DELHI",
     "countdownTitle": "THE COUNTDOWN BEGINS",
     "countdownFooter": "Until our forever begins",
     "thankYouMessage": "Thank you for being a part of our special day.",
@@ -53,18 +53,20 @@
     "title": "Introducing",
     "titleScript": "the families",
     "partner1": {
-      "name": "Suraj",
-      "relationLabel": "S/o",
-      "parents": "Cyril Philip & Soly Joseph",
-      "siblingLabel": "Brother of",
-      "siblings": "Dr. Sruthi Cyril & Sreya Cyril"
+      "name": "Rahul Singh Rawat",
+      "details": [
+        { "label": "Father", "value": "Mr. Ravinder Singh Rawat" },
+        { "label": "Mother", "value": "Mrs. Minakshi Rawat" },
+        { "label": "Brother", "value": "Riddhiman Singh Rawat" }
+      ]
     },
     "partner2": {
-      "name": "Libina",
-      "relationLabel": "D/o",
-      "parents": "Scaria Joseph & Bindu Scaria",
-      "siblingLabel": "Sister of",
-      "siblings": "Leona Mary Scaria & Linett Mary Scaria"
+      "name": "Chetali Rautela",
+      "details": [
+        { "label": "Father", "value": "Mr. Kulwant Singh Rautela" },
+        { "label": "Mother", "value": "Mrs. Rita Rautela" },
+        { "label": "Brother & Sister-in-law", "value": "Mr. Rajat Singh Rautela\nMrs. Aanchal Rautela" }
+      ]
     },
     "closingLine1": "Raised with love,\nunited by destiny,",
     "closingLine2": "together forever",
@@ -78,13 +80,13 @@
     "subtitle": "Some chapters are written by destiny.",
     "quote": "From that first conversation to a lifetime of adventures",
     "photos": [
-      { "src": "/assets/Storyboard-1-ROZeRR6g.webp", "alt": "Every journey led us here" },
-      { "src": "/assets/Storyboard-2-vMt0D-Xn.webp", "alt": "From adventures to forever" },
-      { "src": "/assets/Storyboard-3-CU__j4NP.webp", "alt": "We wrote our story. Now comes forever" },
-      { "src": "/assets/Storyboard-4-C9jvakjK.webp", "alt": "From miles apart to forever close" },
-      { "src": "/assets/Storyboard-5-CozcjNj1.webp", "alt": "Our best adventure begins now" },
-      { "src": "/assets/Storyboard-6-Dn8BwMkO.webp", "alt": "Our best adventure begins now" },
-      { "src": "/assets/Storyboard-7-BlXAwcZq.webp", "alt": "Our best adventure begins now" }
+      { "src": "/assets/img1.jpeg", "alt": "Every journey led us here" },
+      { "src": "/assets/img2.jpeg", "alt": "From adventures to forever" },
+      { "src": "/assets/img3.jpeg", "alt": "We wrote our story. Now comes forever" },
+      { "src": "/assets/img4.jpeg", "alt": "From miles apart to forever close" },
+      { "src": "/assets/img5.jpeg", "alt": "Our best adventure begins now" },
+      { "src": "/assets/img6.jpeg", "alt": "Our best adventure begins now" },
+      { "src": "/assets/img7.jpeg", "alt": "Our best adventure begins now" }
     ],
     "images": {
       "mobile": "/assets/Storyboard-9-BPOwQluv.webp",
@@ -104,12 +106,12 @@
   "wedding": {
     "title": "SCHEDULE OF EVENTS",
     "subtitle": "A CELEBRATION OF LOVE, FAITH & FOREVER",
-    "dateHeading": "9TH JANUARY, 2027",
+    "dateHeading": "24TH NOVEMBER, 2026",
     "eventName": "Wedding",
-    "time": "3:00 PM",
+    "time": "7:00 PM",
     "venueLabel": "Venue:",
-    "venueName": "St. Joseph's Church Pushpagiri\nKottayam",
-    "venueUrl": "https://maps.app.goo.gl/F1RsPp6k4SX69nKL9?g_st=iw",
+    "venueName": "Polo Luxurious Destination\nPushpanjali, NH8, Dwarka Link Rd, opp. Shiv Murti, near Indira Gandhi International Airport, Dwarka, New Delhi, Delhi, 110061",
+    "venueUrl": "https://maps.app.goo.gl/idfejgjrA4cZiKe66?g_st=ic",
     "bibleQuote": "Therefore what God has joined together,\nlet no one separate.",
     "bibleReference": "MATTHEW 19:6",
     "decorativeImage": "/assets/wedding-content-DwkeZBGv.webp",
@@ -138,7 +140,7 @@
     "submitLabel": "SEND RSVP",
     "footerMessage": "Celebrate this new chapter with us.",
     "directionsLabel": "GET DIRECTIONS",
-    "directionsUrl": "https://maps.app.goo.gl/F1RsPp6k4SX69nKL9?g_st=iw",
+    "directionsUrl": "https://maps.app.goo.gl/idfejgjrA4cZiKe66?g_st=ic",
     "submitEndpoint": "",
     "storeLocally": true,
     "images": {
