@@ -7,6 +7,7 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
   const [dismissed, setDismissed] = useState(!intro.enabled);
   const [phase, setPhase] = useState<Phase>("waiting");
   const videoRef = useRef<HTMLVideoElement>(null);
+  const playbackLimit = 4.99;
 
   const finish = useCallback(() => {
     setPhase("closing");
@@ -30,6 +31,15 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
     setPhase("playing");
     video.play().catch(() => finish());
   }, [finish, intro.videoUrl, phase]);
+
+  const stopAtPlaybackLimit = () => {
+    const video = videoRef.current;
+    if (video && video.currentTime >= playbackLimit) {
+      video.pause();
+      video.currentTime = playbackLimit;
+      finish();
+    }
+  };
 
   const primeFirstFrame = () => {
     const video = videoRef.current;
@@ -60,6 +70,7 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
           preload="auto"
           poster={intro.posterImage || undefined}
           onLoadedData={primeFirstFrame}
+          onTimeUpdate={stopAtPlaybackLimit}
           onEnded={finish}
         />
       ) : (
