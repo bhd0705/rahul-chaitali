@@ -88,7 +88,7 @@ export function HeroSection({ config }: { config: WeddingConfig }) {
                 {i > 0 && <span className="h-8 md:h-12 w-[0.5px] bg-[var(--foreground)]/25" />}
                 <div className="flex-1 flex flex-col items-center">
                   <span className="font-display text-[var(--foreground)] text-2xl sm:text-3xl md:text-5xl font-semibold tabular-nums">{pad(countdown[item.k])}</span>
-                  <span className="font-caps text-[0.45rem] md:text-[0.65rem] tracking-widest text-[var(--muted-foreground)] mt-2">{item.label}</span>
+                  <span className="font-caps text-[0.45rem] md:text-[0.65rem] tracking-widest text-[var(--foreground)] font-semibold mt-2">{item.label}</span>
                 </div>
               </div>
             ))}
