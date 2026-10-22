@@ -18,7 +18,7 @@ Edit **`public/wedding.config.json`**. All text, dates, URLs, colors, and image 
 - **Names & families** — `couple`, `families`
 - **Date & countdown** — `hero.dateDisplay`, `hero.countdownIso` (ISO 8601 with timezone)
 - **Story photos** — `story.photos` array (`src` + `alt`)
-- **Events** — `schedulePreWedding`, `wedding`, `reception`
+- **Event** — `wedding`
 - **RSVP** — `rsvp` (set `submitEndpoint` to your API, or keep `storeLocally: true`)
 - **Theme** — `theme` colors
 - **Intro envelope video** — `intro.videoUrl` (file: `public/assets/envelope-intro.mp4`). The video stays paused until the guest taps **TAP TO OPEN**; it then plays once and the invitation appears. Set `intro.enabled` to `false` to skip. Optional `intro.posterImage` for the idle screen.

@@ -64,13 +64,6 @@ export interface WeddingConfig {
     photos: { src: string; alt: string }[];
     images: { mobile: string; desktop: string };
   };
-  schedulePreWedding: {
-    title: string;
-    subtitle: string;
-    cardImage: string;
-    cardAlt: string;
-    images: { mobile: string; desktop: string };
-  };
   wedding: {
     title: string;
     subtitle: string;
@@ -83,13 +76,6 @@ export interface WeddingConfig {
     bibleQuote: string;
     bibleReference: string;
     decorativeImage: string;
-    images: { mobile: string; desktop: string };
-  };
-  reception: {
-    title: string;
-    subtitle: string;
-    scheduleImage: string;
-    scheduleAlt: string;
     images: { mobile: string; desktop: string };
   };
   rsvp: {

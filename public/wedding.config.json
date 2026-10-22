@@ -93,16 +93,6 @@
       "desktop": "/assets/story-bg-desktop-CgovZBCa.webp"
     }
   },
-  "schedulePreWedding": {
-    "title": "SCHEDULE OF EVENTS",
-    "subtitle": "A CELEBRATION OF TRADITION,\nLOVE & FAMILY",
-    "cardImage": "/assets/schedule-card-1-DVLF0AQy.webp",
-    "cardAlt": "Chanthamcharth",
-    "images": {
-      "mobile": "/assets/schedule-bg-CrjkodkA.webp",
-      "desktop": "/assets/schedule-bg-desktop-DLqqgvTI.webp"
-    }
-  },
   "wedding": {
     "title": "SCHEDULE OF EVENTS",
     "subtitle": "A CELEBRATION OF LOVE, FAITH & FOREVER",
@@ -118,16 +108,6 @@
     "images": {
       "mobile": "/assets/wedding-bg-C8jmWq-L.webp",
       "desktop": "/assets/wedding-bg-desktop--WTjG04H.webp"
-    }
-  },
-  "reception": {
-    "title": "SCHEDULE OF EVENTS",
-    "subtitle": "A CELEBRATION OF LOVE, FAITH & FOREVER",
-    "scheduleImage": "/assets/reception-content-BM7GeP99.webp",
-    "scheduleAlt": "Reception Schedule",
-    "images": {
-      "mobile": "/assets/reception-bg-Bhu2sMue.webp",
-      "desktop": "/assets/reception-bg-desktop-j3iMUPCn.webp"
     }
   },
   "rsvp": {
