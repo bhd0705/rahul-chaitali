@@ -18,10 +18,18 @@ export function RsvpSection({ config }: { config: WeddingConfig }) {
 
     try {
       if (rsvp.submitEndpoint) {
+        // Google Apps Script web apps work reliably with a simple form-encoded POST.
+        // This avoids the CORS preflight that can happen with application/json.
+        const body = new URLSearchParams({
+          name: payload.name,
+          attending: payload.attending,
+          submittedAt: payload.submittedAt,
+        });
+
         const res = await fetch(rsvp.submitEndpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+          body: body.toString(),
         });
         if (!res.ok) throw new Error("Submit failed");
       } else if (rsvp.storeLocally) {
@@ -33,7 +41,7 @@ export function RsvpSection({ config }: { config: WeddingConfig }) {
       setName("");
       setAttending(null);
     } catch {
-      setStatus("Could not send RSVP. Check your endpoint in wedding.config.json.");
+      setStatus("Could not send RSVP. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -92,7 +100,7 @@ export function RsvpSection({ config }: { config: WeddingConfig }) {
               className="w-full rounded-full py-2.5 font-caps text-[0.6rem] tracking-[0.18em] text-white disabled:opacity-60"
               style={{ background: theme.rsvpNavy }}
             >
-              {rsvp.submitLabel}
+              {loading ? "SENDING..." : rsvp.submitLabel}
             </button>
             {status && <p className="text-center text-xs font-display pt-2" style={{ color: theme.rsvpNavy }}>{status}</p>}
           </form>
