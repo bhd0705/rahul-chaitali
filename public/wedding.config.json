@@ -23,7 +23,7 @@
     "enabled": true,
     "tapToOpenText": "TAP TO OPEN",
     "videoUrl": "/assets/envelope-intro-ios.mp4",
-    "posterImage": ""
+    "posterImage": "/assets/frame-1.png"
   },
   "couple": {
     "partner1Name": "Rahul",
