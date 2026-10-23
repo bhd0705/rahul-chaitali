@@ -28,24 +28,28 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
       return;
     }
 
+    // Keep play() directly inside the user's tap handler. iOS Safari is
+    // strict about user-gesture initiated media playback.
+    video.muted = true;
+    video.playsInline = true;
+
     setPhase("playing");
-    video.play().catch(() => finish());
+
+    video.play().catch(() => {
+      // Do not close the invitation when Safari temporarily rejects playback.
+      // Return to the tap state so the user can retry without losing the page.
+      setPhase("waiting");
+    });
   }, [finish, intro.videoUrl, phase]);
 
   const stopAtPlaybackLimit = () => {
     const video = videoRef.current;
     if (video && video.currentTime >= playbackLimit) {
+      // Avoid seeking back to 4.99s here. Safari can perform a second media
+      // seek at this point, which may briefly freeze or interrupt playback.
       video.pause();
-      video.currentTime = playbackLimit;
       finish();
     }
-  };
-
-  const primeFirstFrame = () => {
-    const video = videoRef.current;
-    if (!video || intro.posterImage) return;
-    video.currentTime = 0.1;
-    video.pause();
   };
 
   if (dismissed) return null;
@@ -64,14 +68,14 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
         <video
           ref={videoRef}
           src={intro.videoUrl}
-          className="w-full h-full object-cover pointer-events-none"
+          className="w-full h-full object-cover pointer-events-none select-none"
           playsInline
           muted
           preload="auto"
           poster={intro.posterImage || undefined}
-          onLoadedData={primeFirstFrame}
           onTimeUpdate={stopAtPlaybackLimit}
           onEnded={finish}
+          onError={() => setPhase("waiting")}
         />
       ) : (
         <div className="w-full h-full bg-gradient-to-b from-[#1a2c5b] via-[#2a4070] to-[#0f1a30] flex items-center justify-center pointer-events-none">
