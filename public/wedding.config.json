@@ -121,7 +121,7 @@
     "footerMessage": "Celebrate this new chapter with us.",
     "directionsLabel": "GET DIRECTIONS",
     "directionsUrl": "https://maps.app.goo.gl/idfejgjrA4cZiKe66?g_st=ic",
-    "submitEndpoint": "",
+    "submitEndpoint": "https://script.google.com/macros/s/AKfycbzcuWACdN7wPl6N2gPMoAgAr_ap-uk_PfR0zGARKHUzDE7miNsIBqL5khZeE-OBQ5iE_g/exec",
     "storeLocally": true,
     "images": {
       "mobile": "/assets/rsvp-bg-I-N3en4m.webp",
