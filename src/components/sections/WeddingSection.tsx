@@ -4,6 +4,9 @@ import { Reveal } from "../Reveal";
 
 export function WeddingSection({ config }: { config: WeddingConfig }) {
   const w = config.wedding;
+  const [venueName, ...venueAddressParts] = w.venueName.split("\n");
+  const venueAddress = venueAddressParts.join("\n");
+
   return (
     <section id="wedding" className="relative isolate min-h-screen" style={{ background: config.theme.sectionGray }}>
       <BackgroundPair mobile={w.images.mobile} desktop={w.images.desktop} />
@@ -36,8 +39,15 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
             <span className="h-[1px] w-6 bg-[var(--gold)]" />
           </div>
           <p className="mt-4 font-script text-3xl md:text-4xl text-[var(--gold)]">{w.venueLabel}</p>
-          <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-1 mx-auto max-w-md font-display text-sm md:text-base text-[var(--primary)] tracking-wide leading-relaxed font-semibold hover:text-[var(--gold)] block whitespace-pre-line">
-            {w.venueName}
+          <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-1 mx-auto max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line">
+            <span className="block font-display text-xl md:text-2xl font-bold tracking-wide leading-tight">
+              {venueName}
+            </span>
+            {venueAddress && (
+              <span className="block mt-1 font-display text-sm md:text-base font-semibold tracking-wide leading-relaxed">
+                {venueAddress}
+              </span>
+            )}
           </a>
         </Reveal>
 
