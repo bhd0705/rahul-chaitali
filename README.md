@@ -21,7 +21,7 @@ Edit **`public/wedding.config.json`**. All text, dates, URLs, colors, and image 
 - **Event** — `wedding`
 - **RSVP** — `rsvp` (set `submitEndpoint` to your API, or keep `storeLocally: true`)
 - **Theme** — `theme` colors
-- **Intro envelope video** — `intro.videoUrl` (file: `public/assets/envelope-intro.mp4`). The video stays paused until the guest taps **TAP TO OPEN**; it then plays once and the invitation appears. Set `intro.enabled` to `false` to skip. Optional `intro.posterImage` for the idle screen.
+- **Intro envelope video** — `intro.videoUrl` (file: `public/assets/envelope-intro-ios.mp4`, H.264 Baseline/AAC for iOS compatibility). The video stays paused until the guest taps **TAP TO OPEN**; it then plays once and the invitation appears. Set `intro.enabled` to `false` to skip. Optional `intro.posterImage` for the idle screen.
 - **Assets** — replace files in `public/assets/` and update paths in config
 
 ## Build for production

@@ -22,7 +22,7 @@
   "intro": {
     "enabled": true,
     "tapToOpenText": "TAP TO OPEN",
-    "videoUrl": "/assets/envelope-intro.mp4",
+    "videoUrl": "/assets/envelope-intro-ios.mp4",
     "posterImage": ""
   },
   "couple": {
