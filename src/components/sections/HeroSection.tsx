@@ -61,7 +61,7 @@ export function HeroSection({ config }: { config: WeddingConfig }) {
           <ScratchCard enabled={hero.scratchRevealEnabled} onReveal={() => setShowCountdown(true)}>
             <div className="flex flex-col items-center justify-center select-none py-1 md:py-3">
               <p className="font-caps text-[0.5rem] md:text-[0.65rem] tracking-[0.25em] text-[var(--gold)] mb-1">{hero.saveTheDateLabel}</p>
-              <div className="font-script text-2xl sm:text-3xl md:text-4xl text-[var(--foreground)] leading-none my-1 md:my-2">{hero.dateDisplay}</div>
+              <div className="font-script text-2xl sm:text-3xl md:text-4xl text-[var(--foreground)] leading-none my-1 md:my-2 [word-spacing:0.18em] md:[word-spacing:0.28em]">{hero.dateDisplay}</div>
               <p className="font-caps text-[0.45rem] md:text-[0.55rem] tracking-[0.2em] text-[var(--muted-foreground)]">{hero.location}</p>
             </div>
           </ScratchCard>
