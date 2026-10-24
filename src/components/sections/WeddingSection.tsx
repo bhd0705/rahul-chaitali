@@ -38,17 +38,20 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
             {w.time}
             <span className="h-[1px] w-6 bg-[var(--gold)]" />
           </div>
-          <p className="mt-4 font-script text-3xl md:text-4xl text-[var(--gold)]">{w.venueLabel}</p>
-          <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-1 mx-auto max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line">
-            <span className="block font-display text-xl md:text-2xl font-bold tracking-wide leading-tight">
-              {venueName}
-            </span>
-            {venueAddress && (
-              <span className="block mt-1 font-display text-sm md:text-base font-semibold tracking-wide leading-relaxed">
-                {venueAddress}
+
+          <div className="relative -top-8 md:top-0">
+            <p className="mt-4 font-script text-3xl md:text-4xl text-[var(--gold)]">{w.venueLabel}</p>
+            <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-1 mx-auto w-full max-w-[330px] md:max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line break-words">
+              <span className="block font-display text-xl md:text-2xl font-bold tracking-wide leading-tight">
+                {venueName}
               </span>
-            )}
-          </a>
+              {venueAddress && (
+                <span className="block mt-1 font-display text-sm md:text-base font-semibold tracking-wide leading-snug break-words">
+                  {venueAddress}
+                </span>
+              )}
+            </a>
+          </div>
         </Reveal>
 
         <Reveal delayMs={400} className="text-center mt-16 md:mt-28 z-10">
