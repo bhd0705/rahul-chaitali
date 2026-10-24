@@ -29,7 +29,7 @@ export function FamiliesSection({ config }: { config: WeddingConfig }) {
     <section className="relative flex flex-col items-center justify-start min-h-screen py-10 px-4 text-center select-none overflow-hidden isolate bg-white">
       <BackgroundPair mobile={families.images.mobile} desktop={families.images.desktop} />
 
-      <div className="flex-1 flex flex-col items-center justify-center w-full max-w-[640px] py-8">
+      <div className="flex flex-col items-center justify-start w-full max-w-[640px] pt-2 pb-8">
         <Reveal variant="down" className="flex-none w-full">
           <p className="font-caps text-[0.55rem] md:text-xs tracking-[0.3em] text-[var(--primary)] font-semibold">{families.eyebrow}</p>
           <h2 className="mt-1 font-display text-2xl md:text-4xl tracking-wide text-[var(--primary)] uppercase font-medium">
@@ -38,7 +38,7 @@ export function FamiliesSection({ config }: { config: WeddingConfig }) {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-[1fr_auto_1fr] gap-x-2 md:gap-x-6 items-center w-full px-1 mt-4 md:mt-6">
+        <div className="grid grid-cols-[1fr_auto_1fr] gap-x-2 md:gap-x-6 items-center w-full px-1 mt-2 md:mt-3">
           <FamilyColumn member={families.partner1} variant="left" />
           <Reveal variant="scale" delayMs={400} className="flex flex-col items-center self-stretch min-h-[160px] md:min-h-[220px]">
             <div className="w-[1px] flex-1 bg-gradient-to-b from-transparent to-[var(--gold)]/75" />
