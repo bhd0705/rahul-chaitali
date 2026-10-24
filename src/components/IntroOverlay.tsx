@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { WeddingConfig } from "../types";
 
 type Phase = "waiting" | "playing" | "closing";
@@ -10,6 +10,24 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
   const musicRef = useRef<HTMLAudioElement>(null);
   const playbackLimit = 4.99;
 
+  // Keep the audio element mounted after the intro overlay disappears.
+  // The music loops until the page is closed or refreshed.
+  useEffect(() => {
+    const music = musicRef.current;
+    if (!music) return;
+
+    const startMusic = () => {
+      music.volume = 1;
+      music.loop = true;
+      music.play().catch(() => {
+        // Browsers may block playback until the user taps the page.
+      });
+    };
+
+    window.addEventListener("pageshow", startMusic);
+    return () => window.removeEventListener("pageshow", startMusic);
+  }, []);
+
   const finish = useCallback(() => {
     setPhase("closing");
     window.setTimeout(() => setDismissed(true), 1000);
@@ -18,12 +36,12 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
   const handleTap = useCallback(() => {
     if (phase !== "waiting") return;
 
-    // Start the background music directly from the user's tap so mobile
+    // Start background music directly from the user's tap so mobile
     // browsers (especially iOS Safari) allow audio playback.
     const music = musicRef.current;
     if (music) {
       music.volume = 1;
-      music.currentTime = 0;
+      music.loop = true;
       music.play().catch(() => {
         // Some browsers may still block audio; the invitation can continue normally.
       });
@@ -40,16 +58,12 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
       return;
     }
 
-    // Keep play() directly inside the user's tap handler. iOS Safari is
-    // strict about user-gesture initiated media playback.
+    // Keep video playback directly in the user's tap handler for iOS Safari.
     video.muted = true;
     video.playsInline = true;
-
     setPhase("playing");
 
     video.play().catch(() => {
-      // Do not close the invitation when Safari temporarily rejects playback.
-      // Return to the tap state so the user can retry without losing the page.
       setPhase("waiting");
     });
   }, [finish, intro.videoUrl, phase]);
@@ -57,14 +71,14 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
   const stopAtPlaybackLimit = () => {
     const video = videoRef.current;
     if (video && video.currentTime >= playbackLimit) {
-      // Avoid seeking back to 4.99s here. Safari can perform a second media
-      // seek at this point, which may briefly freeze or interrupt playback.
       video.pause();
       finish();
     }
   };
 
-  if (dismissed) return null;
+  if (dismissed) {
+    return <audio ref={musicRef} src="/assets/music.mp3" loop preload="auto" />;
+  }
 
   const showTapHint = phase === "waiting";
 
