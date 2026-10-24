@@ -5,7 +5,7 @@ import { Reveal } from "../Reveal";
 export function WeddingSection({ config }: { config: WeddingConfig }) {
   const w = config.wedding;
   const [venueName, ...venueAddressParts] = w.venueName.split("\n");
-  const venueAddress = venueAddressParts.join("\n");
+  const venueAddress = venueAddressParts.join(" ");
 
   return (
     <section
@@ -16,7 +16,6 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
       <BackgroundPair mobile={w.images.mobile} desktop={w.images.desktop} />
 
       <div className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center px-4 pb-12 pt-[clamp(17rem,48vh,23rem)] text-center sm:px-6 sm:pt-[clamp(19rem,42vh,25rem)] md:pt-16 md:pb-16">
-        {/* Keep only the schedule heading/subtitle in the upper paper area. */}
         <Reveal variant="down" className="mb-3 w-full max-w-3xl md:mb-6">
           <h2 className="font-display text-2xl font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-3xl md:text-5xl md:tracking-[0.1em]">
             {w.title}
@@ -27,8 +26,7 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
           <div className="mt-2 flex justify-center opacity-85 md:mt-3"><BirdDivider /></div>
         </Reveal>
 
-        {/* Everything below the heading is deliberately pushed into the blue area on mobile. */}
-        <div className="mt-[clamp(5.5rem,12vh,8.5rem)] flex w-full flex-col items-center md:mt-0">
+        <div className="mt-[clamp(6.25rem,13.5vh,9rem)] flex w-full flex-col items-center md:mt-0">
           <Reveal delayMs={100} className="z-10 w-full max-w-xl px-1">
             <h3 className="font-display text-base font-medium uppercase leading-relaxed tracking-[0.08em] text-[var(--primary)] sm:text-lg md:text-xl md:tracking-[0.1em]">
               {w.dateHeading}
@@ -70,7 +68,7 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
                 {venueName}
               </span>
               {venueAddress && (
-                <span className="mt-1 block whitespace-pre-line break-words font-display text-xs font-semibold leading-snug tracking-wide sm:text-sm md:text-base md:leading-[1.3]">
+                <span className="mt-1 block font-display text-xs font-semibold leading-snug tracking-wide sm:text-sm md:text-base md:leading-[1.3]">
                   {venueAddress}
                 </span>
               )}
