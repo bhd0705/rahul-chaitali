@@ -44,7 +44,7 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
             <img
               src={w.decorativeImage}
               alt=""
-              className="pointer-events-none h-auto w-full max-w-[19rem] object-contain opacity-95 mix-blend-lighten sm:max-w-[22rem] md:max-w-[26rem]"
+              className="pointer-events-none h-auto w-full max-w-[16rem] object-contain sm:max-w-[20rem] md:max-w-72"
             />
           </Reveal>
 
