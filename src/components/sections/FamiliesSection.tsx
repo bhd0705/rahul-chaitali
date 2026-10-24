@@ -26,10 +26,10 @@ function FamilyColumn({ member, variant }: { member: WeddingConfig["families"]["
 export function FamiliesSection({ config }: { config: WeddingConfig }) {
   const { families, couple } = config;
   return (
-    <section className="relative flex flex-col items-center justify-start min-h-screen py-10 px-4 text-center select-none overflow-hidden isolate bg-white">
+    <section className="relative flex flex-col items-center justify-center min-h-screen py-10 px-4 text-center select-none overflow-hidden isolate bg-white">
       <BackgroundPair mobile={families.images.mobile} desktop={families.images.desktop} />
 
-      <div className="flex flex-col items-center justify-start w-full max-w-[640px] pt-2 pb-8">
+      <div className="flex flex-col items-center justify-start w-full max-w-[640px] py-2">
         <Reveal variant="down" className="flex-none w-full">
           <p className="font-caps text-[0.55rem] md:text-xs tracking-[0.3em] text-[var(--primary)] font-semibold">{families.eyebrow}</p>
           <h2 className="mt-1 font-display text-2xl md:text-4xl tracking-wide text-[var(--primary)] uppercase font-medium">
