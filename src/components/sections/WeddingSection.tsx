@@ -42,9 +42,9 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
         </Reveal>
 
         {/* Blue band: ONLY date, church image, time and venue */}
-        <div className="flex h-full min-h-0 translate-y-[4%] flex-col items-center justify-center overflow-hidden px-1 py-1 sm:translate-y-0 sm:py-3 md:translate-y-[2%] md:py-4">
+        <div className="flex h-full min-h-0 translate-y-[4%] flex-col items-center justify-center px-1 py-1 sm:translate-y-0 sm:py-3 md:translate-y-[2%] md:py-4">
           <Reveal delayMs={100} className="w-full max-w-xl shrink-0">
-            <h3 className="font-display text-base font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-lg md:text-2xl md:tracking-[0.1em]">
+            <h3 className="font-display text-lg font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-xl md:text-3xl md:tracking-[0.1em]">
               {w.dateHeading}
             </h3>
           </Reveal>
@@ -57,18 +57,18 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
             <img
               src={w.decorativeImage}
               alt=""
-              className="pointer-events-none h-auto max-h-[4.25rem] w-full max-w-[8rem] object-contain sm:max-h-[4.75rem] sm:max-w-[9rem] md:max-h-[5rem] md:max-w-[11rem]"
+              className="pointer-events-none h-auto max-h-[4.5rem] w-full max-w-[9rem] object-contain sm:max-h-[5rem] sm:max-w-[10rem] md:max-h-[6rem] md:max-w-[12rem]"
             />
           </Reveal>
 
           <Reveal delayMs={300} className="w-full max-w-xl shrink-0">
             <div className="mt-1.5 flex items-center justify-center gap-3 font-bold tracking-widest text-[var(--primary)] sm:mt-3 md:mt-4">
               <span className="h-px w-6 bg-[var(--gold)] sm:w-7" />
-              <span className="text-base sm:text-lg md:text-2xl">{w.time}</span>
+              <span className="text-lg sm:text-xl md:text-3xl">{w.time}</span>
               <span className="h-px w-6 bg-[var(--gold)] sm:w-7" />
             </div>
 
-            <p className="mt-1.5 font-script text-2xl leading-none text-[var(--gold)] sm:mt-2.5 sm:text-2xl md:mt-3 md:text-4xl">
+            <p className="mt-1.5 font-script text-3xl leading-none text-[var(--gold)] sm:mt-2.5 sm:text-4xl md:mt-3 md:text-5xl">
               {w.venueLabel}
             </p>
 
@@ -76,13 +76,13 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
               href={w.venueUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-auto mt-1 block w-full max-w-[320px] break-words px-1 text-[var(--primary)] hover:text-[var(--gold)] sm:max-w-sm md:max-w-md"
+              className="mx-auto mt-1 block w-full max-w-[360px] break-words px-1 text-[var(--primary)] hover:text-[var(--gold)] sm:max-w-sm md:max-w-md"
             >
-              <span className="block font-display text-base font-bold leading-tight tracking-wide sm:text-base md:text-2xl">
+              <span className="block font-display text-lg font-bold leading-tight tracking-wide sm:text-xl md:text-2xl">
                 {venueName}
               </span>
               {venueAddress && (
-                <span className="mt-1 block whitespace-pre-line font-display text-xs font-semibold leading-[1.3] tracking-wide sm:text-xs md:text-base md:leading-snug">
+                <span className="mt-1 block whitespace-pre-line font-display text-sm font-semibold leading-[1.3] tracking-wide sm:text-base md:text-lg md:leading-snug">
                   {venueAddress}
                 </span>
               )}
