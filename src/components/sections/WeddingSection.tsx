@@ -16,6 +16,7 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
       <BackgroundPair mobile={w.images.mobile} desktop={w.images.desktop} />
 
       <div className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center px-4 pb-12 pt-[clamp(17rem,48vh,23rem)] text-center sm:px-6 sm:pt-[clamp(19rem,42vh,25rem)] md:pt-16 md:pb-16">
+        {/* Keep only the schedule heading/subtitle in the upper paper area. */}
         <Reveal variant="down" className="mb-3 w-full max-w-3xl md:mb-6">
           <h2 className="font-display text-2xl font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-3xl md:text-5xl md:tracking-[0.1em]">
             {w.title}
@@ -26,9 +27,8 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
           <div className="mt-2 flex justify-center opacity-85 md:mt-3"><BirdDivider /></div>
         </Reveal>
 
-        <div
-          className="md:contents max-md:relative max-md:left-1/2 max-md:z-10 max-md:mt-1 max-md:flex max-md:w-screen max-md:-translate-x-1/2 max-md:flex-col max-md:items-center max-md:bg-[#b5c4db] max-md:px-4 max-md:pb-10 max-md:pt-4"
-        >
+        {/* Everything below the heading is deliberately pushed into the blue area on mobile. */}
+        <div className="mt-[clamp(5.5rem,12vh,8.5rem)] flex w-full flex-col items-center md:mt-0">
           <Reveal delayMs={100} className="z-10 w-full max-w-xl px-1">
             <h3 className="font-display text-base font-medium uppercase leading-relaxed tracking-[0.08em] text-[var(--primary)] sm:text-lg md:text-xl md:tracking-[0.1em]">
               {w.dateHeading}
@@ -76,12 +76,12 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
               )}
             </a>
           </Reveal>
-        </div>
 
-        <Reveal delayMs={400} className="z-10 mt-8 w-full max-w-md px-2 sm:mt-10 md:mt-20">
-          <p className="mx-auto max-w-sm whitespace-pre-line font-serif text-sm italic leading-relaxed text-[var(--primary)] sm:text-base">"{w.bibleQuote}"</p>
-          <p className="mt-3 font-caps text-[0.65rem] font-bold tracking-[0.2em] text-[var(--primary)]">{w.bibleReference}</p>
-        </Reveal>
+          <Reveal delayMs={400} className="z-10 mt-8 w-full max-w-md px-2 sm:mt-10 md:mt-20">
+            <p className="mx-auto max-w-sm whitespace-pre-line font-serif text-sm italic leading-relaxed text-[var(--primary)] sm:text-base">"{w.bibleQuote}"</p>
+            <p className="mt-3 font-caps text-[0.65rem] font-bold tracking-[0.2em] text-[var(--primary)]">{w.bibleReference}</p>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
