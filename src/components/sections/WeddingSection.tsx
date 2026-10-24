@@ -19,25 +19,29 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
         className="object-fill md:object-center"
       />
 
-      {/* Keep the event information inside the blue band of the artwork. */}
-      <div className="relative mx-auto grid min-h-screen w-full max-w-5xl grid-rows-[30%_40%_30%] px-4 text-center sm:px-6 md:px-8">
-        {/* Cream above the blue */}
+      {/*
+        The artwork has three visual bands:
+        cream / blue / cream.
+        Only the date, church image, time and venue belong in the blue band.
+      */}
+      <div className="relative mx-auto grid min-h-screen w-full max-w-5xl grid-rows-[26%_48%_26%] px-3 text-center sm:px-6 sm:grid-rows-[25%_50%_25%] md:px-8">
+        {/* Top cream band: heading only */}
         <Reveal
           variant="down"
-          className="flex h-full flex-col items-center justify-end pb-3 md:pb-5"
+          className="flex h-full flex-col items-center justify-end pb-2 sm:pb-3 md:pb-5"
         >
           <h2 className="font-display text-2xl font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-3xl md:text-5xl md:tracking-[0.1em]">
             {w.title}
           </h2>
-          <p className="mt-1.5 font-caps text-[10px] font-semibold leading-relaxed tracking-[0.12em] text-[var(--primary)] sm:text-xs md:mt-3 md:text-sm md:tracking-[0.15em]">
+          <p className="mt-1 font-caps text-[9px] font-semibold leading-relaxed tracking-[0.1em] text-[var(--primary)] sm:mt-1.5 sm:text-xs md:mt-3 md:text-sm md:tracking-[0.15em]">
             {w.subtitle}
           </p>
-          <div className="mt-1.5 flex justify-center opacity-85 md:mt-3">
+          <div className="mt-1 flex justify-center opacity-85 sm:mt-1.5 md:mt-3">
             <BirdDivider />
           </div>
         </Reveal>
 
-        {/* Blue band — date, church, wedding, time and venue all stay here. */}
+        {/* Blue band: ONLY date, church image, time and venue */}
         <div className="flex h-full min-h-0 flex-col items-center justify-center overflow-hidden px-1 py-2 sm:py-3 md:py-4">
           <Reveal delayMs={100} className="w-full max-w-xl shrink-0">
             <h3 className="font-display text-[11px] font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-base md:text-xl md:tracking-[0.1em]">
@@ -45,30 +49,29 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
             </h3>
           </Reveal>
 
-          <Reveal variant="scale" delayMs={200} className="mt-1 flex w-full shrink-0 justify-center sm:mt-2 md:mt-2">
+          <Reveal
+            variant="scale"
+            delayMs={200}
+            className="mt-1.5 flex w-full shrink-0 justify-center sm:mt-2 md:mt-3"
+          >
             <img
               src={w.decorativeImage}
               alt=""
-              className="pointer-events-none h-auto max-h-[3.25rem] w-full max-w-[7rem] object-contain sm:max-h-[4rem] sm:max-w-[8.5rem] md:max-h-[5rem] md:max-w-[11rem]"
+              className="pointer-events-none h-auto max-h-[3.5rem] w-full max-w-[7rem] object-contain sm:max-h-[4.25rem] sm:max-w-[8.5rem] md:max-h-[5rem] md:max-w-[11rem]"
             />
           </Reveal>
 
-          <Reveal delayMs={300} className="w-full max-w-xl shrink-0">
-            <h1 className="mt-0.5 font-script text-3xl leading-none text-[var(--primary)] sm:text-5xl md:mt-1 md:text-7xl">
-              {w.eventName}
-            </h1>
-
-            <div className="mt-1 flex scale-90 justify-center opacity-85 sm:mt-1.5 sm:scale-100 md:mt-2">
-              <BirdDivider />
-            </div>
-
-            <div className="mt-1 flex items-center justify-center gap-3 font-bold tracking-widest text-[var(--primary)] sm:mt-1.5 md:mt-2 md:text-xl">
+          <Reveal
+            delayMs={300}
+            className="w-full max-w-xl shrink-0"
+          >
+            <div className="mt-2 flex items-center justify-center gap-3 font-bold tracking-widest text-[var(--primary)] sm:mt-3 md:mt-4 md:text-xl">
               <span className="h-px w-5 bg-[var(--gold)] sm:w-6" />
               <span className="text-xs sm:text-base md:text-xl">{w.time}</span>
               <span className="h-px w-5 bg-[var(--gold)] sm:w-6" />
             </div>
 
-            <p className="mt-1 font-script text-lg text-[var(--gold)] sm:mt-1.5 sm:text-2xl md:mt-2 md:text-4xl">
+            <p className="mt-2 font-script text-lg text-[var(--gold)] sm:mt-2.5 sm:text-2xl md:mt-3 md:text-4xl">
               {w.venueLabel}
             </p>
 
@@ -76,13 +79,13 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
               href={w.venueUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-auto mt-0 block w-full max-w-[290px] break-words text-[var(--primary)] hover:text-[var(--gold)] sm:max-w-sm md:max-w-md"
+              className="mx-auto mt-0 block w-full max-w-[300px] break-words px-1 text-[var(--primary)] hover:text-[var(--gold)] sm:max-w-sm md:max-w-md"
             >
               <span className="block font-display text-[11px] font-bold leading-tight tracking-wide sm:text-base md:text-2xl">
                 {venueName}
               </span>
               {venueAddress && (
-                <span className="mt-px block font-display text-[8px] font-semibold leading-[1.25] tracking-wide sm:mt-0.5 sm:text-[10px] md:text-sm md:leading-[1.3]">
+                <span className="mt-0.5 block font-display text-[8px] font-semibold leading-[1.25] tracking-wide sm:text-[10px] md:text-sm md:leading-[1.3]">
                   {venueAddress}
                 </span>
               )}
@@ -90,12 +93,12 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
           </Reveal>
         </div>
 
-        {/* Cream below the blue */}
+        {/* Bottom cream band: quote only, pushed below the blue artwork */}
         <Reveal
           delayMs={400}
-          className="flex h-full flex-col items-center justify-start px-2 pt-5 md:pt-8"
+          className="flex h-full flex-col items-center justify-start px-3 pt-[9%] sm:px-2 sm:pt-[8%] md:pt-[7%]"
         >
-          <p className="mx-auto max-w-sm whitespace-pre-line font-serif text-sm italic leading-relaxed text-[var(--primary)] sm:text-base">
+          <p className="mx-auto max-w-sm whitespace-pre-line font-serif text-sm italic leading-relaxed text-[var(--primary)] sm:text-base md:max-w-lg">
             "{w.bibleQuote}"
           </p>
           <p className="mt-2 font-caps text-[0.65rem] font-bold tracking-[0.2em] text-[var(--primary)] md:mt-3">
