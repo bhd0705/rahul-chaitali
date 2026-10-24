@@ -28,28 +28,28 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
           <div className="mt-1.5 flex justify-center opacity-85 md:mt-3"><BirdDivider /></div>
         </Reveal>
 
-        {/* Blue band only */}
-        <div className="flex h-full flex-col items-center justify-center overflow-hidden py-1">
-          <Reveal delayMs={100} className="z-10 w-full max-w-xl px-1">
+        {/* Blue band — solid fill so art aligns with the background panel */}
+        <div className="relative flex h-full flex-col items-center justify-center py-2 sm:py-3">
+          <div
+            className="pointer-events-none absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-[var(--secondary)]"
+            aria-hidden
+          />
+
+          <Reveal delayMs={100} className="relative z-10 w-full max-w-xl px-1">
             <h3 className="font-display text-sm font-medium uppercase leading-snug tracking-[0.08em] text-[var(--primary)] sm:text-lg md:text-xl md:tracking-[0.1em]">
               {w.dateHeading}
             </h3>
           </Reveal>
 
-          <Reveal
-            variant="scale"
-            delayMs={200}
-            className="relative z-10 mt-1 flex h-[4.5rem] w-28 shrink-0 items-center justify-center overflow-hidden sm:mt-2 sm:h-32 sm:w-40 md:mt-3 md:h-52 md:w-52"
-          >
+          <Reveal variant="scale" delayMs={200} className="relative z-10 mt-2 w-full max-w-md px-2 sm:mt-3 md:mt-4">
             <img
               src={w.decorativeImage}
               alt=""
-              className="pointer-events-none absolute left-1/2 top-1/2 w-[420px] max-w-none object-cover opacity-90 mix-blend-lighten sm:w-[500px] md:w-[600px]"
-              style={{ transform: "translate(-50%, -52%)", clipPath: "inset(42% 0 43% 0)" }}
+              className="pointer-events-none mx-auto h-auto w-full max-w-[17rem] object-contain sm:max-w-xs md:max-w-sm"
             />
           </Reveal>
 
-          <Reveal delayMs={300} className="z-10 -mt-1 w-full max-w-xl px-1 sm:-mt-2 md:-mt-5">
+          <Reveal delayMs={300} className="relative z-10 mt-2 w-full max-w-xl px-1 sm:mt-3 md:mt-4">
             <h1 className="font-script text-4xl leading-none text-[var(--primary)] sm:text-6xl md:text-7xl">{w.eventName}</h1>
             <div className="mt-0.5 flex justify-center opacity-85 md:mt-2"><BirdDivider /></div>
 
