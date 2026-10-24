@@ -7,6 +7,7 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
   const [dismissed, setDismissed] = useState(!intro.enabled);
   const [phase, setPhase] = useState<Phase>("waiting");
   const videoRef = useRef<HTMLVideoElement>(null);
+  const musicRef = useRef<HTMLAudioElement>(null);
   const playbackLimit = 4.99;
 
   const finish = useCallback(() => {
@@ -16,6 +17,17 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
 
   const handleTap = useCallback(() => {
     if (phase !== "waiting") return;
+
+    // Start the background music directly from the user's tap so mobile
+    // browsers (especially iOS Safari) allow audio playback.
+    const music = musicRef.current;
+    if (music) {
+      music.volume = 1;
+      music.currentTime = 0;
+      music.play().catch(() => {
+        // Some browsers may still block audio; the invitation can continue normally.
+      });
+    }
 
     if (!intro.videoUrl) {
       finish();
@@ -64,6 +76,8 @@ export function IntroOverlay({ intro }: { intro: WeddingConfig["intro"] }) {
         transition: "opacity 1000ms ease-in-out",
       }}
     >
+      <audio ref={musicRef} src="/assets/music.mp3" loop preload="auto" />
+
       {intro.videoUrl ? (
         <video
           ref={videoRef}
