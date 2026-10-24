@@ -39,9 +39,9 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
             <span className="h-[1px] w-6 bg-[var(--gold)]" />
           </div>
 
-          <div className="relative -top-8 md:top-0">
-            <p className="mt-4 font-script text-3xl md:text-4xl text-[var(--gold)]">{w.venueLabel}</p>
-            <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-1 mx-auto w-full max-w-[330px] md:max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line break-words">
+          <div className="mt-5">
+            <p className="font-script text-3xl md:text-4xl text-[var(--gold)] leading-none">{w.venueLabel}</p>
+            <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-3 mx-auto w-full max-w-[330px] md:max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line break-words">
               <span className="block font-display text-xl md:text-2xl font-bold tracking-wide leading-tight">
                 {venueName}
               </span>
