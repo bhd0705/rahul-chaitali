@@ -11,17 +11,17 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
     <section id="wedding" className="relative isolate min-h-screen" style={{ background: config.theme.sectionGray }}>
       <BackgroundPair mobile={w.images.mobile} desktop={w.images.desktop} />
       <div className="relative w-full min-h-screen flex flex-col items-center pt-48 md:pt-16 px-4 pb-20">
-        <Reveal variant="down" className="text-center mb-8">
+        <Reveal variant="down" className="text-center mb-6">
           <h2 className="font-display text-3xl md:text-5xl text-[var(--primary)] font-medium tracking-[0.1em] uppercase">{w.title}</h2>
-          <p className="mt-4 font-caps text-xs md:text-sm text-[var(--primary)] tracking-[0.15em] font-semibold">{w.subtitle}</p>
-          <div className="mt-4 flex justify-center opacity-85"><BirdDivider /></div>
+          <p className="mt-3 font-caps text-xs md:text-sm text-[var(--primary)] tracking-[0.15em] font-semibold">{w.subtitle}</p>
+          <div className="mt-3 flex justify-center opacity-85"><BirdDivider /></div>
         </Reveal>
 
-        <Reveal delayMs={100} className="text-center mt-4 z-10">
+        <Reveal delayMs={100} className="text-center mt-3 z-10">
           <h3 className="font-display text-lg md:text-xl text-[var(--primary)] font-medium tracking-[0.1em] uppercase">{w.dateHeading}</h3>
         </Reveal>
 
-        <Reveal variant="scale" delayMs={200} className="relative w-48 h-48 md:w-56 md:h-56 flex items-center justify-center z-10 overflow-hidden">
+        <Reveal variant="scale" delayMs={200} className="relative w-48 h-44 md:h-56 md:w-56 flex items-center justify-center z-10 overflow-hidden">
           <img
             src={w.decorativeImage}
             alt=""
@@ -32,16 +32,16 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
 
         <Reveal delayMs={300} className="text-center z-10 -mt-2 md:-mt-6">
           <h1 className="font-script text-6xl md:text-7xl text-[var(--primary)] leading-none">{w.eventName}</h1>
-          <div className="mt-2 flex justify-center opacity-85"><BirdDivider /></div>
-          <div className="mt-4 flex items-center justify-center gap-4 text-[var(--primary)] font-bold text-lg md:text-xl tracking-widest">
+          <div className="mt-1 flex justify-center opacity-85"><BirdDivider /></div>
+          <div className="mt-2 flex items-center justify-center gap-4 text-[var(--primary)] font-bold text-lg md:text-xl tracking-widest">
             <span className="h-[1px] w-6 bg-[var(--gold)]" />
             {w.time}
             <span className="h-[1px] w-6 bg-[var(--gold)]" />
           </div>
 
-          <div className="mt-5">
+          <div className="mt-3">
             <p className="font-script text-3xl md:text-4xl text-[var(--gold)] leading-none">{w.venueLabel}</p>
-            <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-3 mx-auto w-full max-w-[330px] md:max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line break-words">
+            <a href={w.venueUrl} target="_blank" rel="noopener noreferrer" className="mt-2 mx-auto w-full max-w-[330px] md:max-w-md text-[var(--primary)] hover:text-[var(--gold)] block whitespace-pre-line break-words">
               <span className="block font-display text-xl md:text-2xl font-bold tracking-wide leading-tight">
                 {venueName}
               </span>
@@ -54,9 +54,9 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
           </div>
         </Reveal>
 
-        <Reveal delayMs={400} className="text-center mt-16 md:mt-28 z-10">
+        <Reveal delayMs={400} className="text-center mt-12 md:mt-28 z-10">
           <p className="font-serif italic text-[var(--primary)] text-sm md:text-base max-w-xs mx-auto whitespace-pre-line">"{w.bibleQuote}"</p>
-          <p className="mt-4 font-caps text-[0.65rem] tracking-[0.2em] text-[var(--primary)] font-bold">{w.bibleReference}</p>
+          <p className="mt-3 font-caps text-[0.65rem] tracking-[0.2em] text-[var(--primary)] font-bold">{w.bibleReference}</p>
         </Reveal>
       </div>
     </section>
