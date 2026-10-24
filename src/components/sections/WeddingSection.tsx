@@ -42,7 +42,7 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
         </Reveal>
 
         {/* Blue band: ONLY date, church image, time and venue */}
-        <div className="flex h-full min-h-0 flex-col items-center justify-center overflow-hidden px-1 py-1 sm:py-3 md:py-4">
+        <div className="flex h-full min-h-0 translate-y-[4%] flex-col items-center justify-center overflow-hidden px-1 py-1 sm:translate-y-0 sm:py-3 md:translate-y-[2%] md:py-4">
           <Reveal delayMs={100} className="w-full max-w-xl shrink-0">
             <h3 className="font-display text-base font-medium uppercase leading-tight tracking-[0.08em] text-[var(--primary)] sm:text-lg md:text-2xl md:tracking-[0.1em]">
               {w.dateHeading}
