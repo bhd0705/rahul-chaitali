@@ -11,9 +11,13 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
     <section
       id="wedding"
       className="relative isolate min-h-screen overflow-hidden"
-      style={{ background: config.theme.sectionGray }}
+      style={{ background: config.theme.paper }}
     >
-      <BackgroundPair mobile={w.images.mobile} desktop={w.images.desktop} />
+      <BackgroundPair
+        mobile={w.images.mobile}
+        desktop={w.images.desktop}
+        className="object-fill md:object-center"
+      />
 
       {/* Rows match the cream / blue / cream bands of the background art. */}
       <div className="relative mx-auto grid min-h-screen w-full max-w-5xl grid-rows-[32%_47%_21%] px-4 text-center sm:px-6 md:grid-rows-[27%_46%_27%] md:px-8">
@@ -28,28 +32,23 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
           <div className="mt-1.5 flex justify-center opacity-85 md:mt-3"><BirdDivider /></div>
         </Reveal>
 
-        {/* Blue band — solid fill so art aligns with the background panel */}
-        <div className="relative flex h-full flex-col items-center justify-center py-2 sm:py-3">
-          <div
-            className="pointer-events-none absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-[var(--secondary)]"
-            aria-hidden
-          />
-
-          <Reveal delayMs={100} className="relative z-10 w-full max-w-xl px-1">
+        {/* Blue band — content only; background art supplies the blue panel */}
+        <div className="flex h-full flex-col items-center justify-center gap-1 py-1 sm:gap-2 sm:py-2">
+          <Reveal delayMs={100} className="w-full max-w-xl px-1">
             <h3 className="font-display text-sm font-medium uppercase leading-snug tracking-[0.08em] text-[var(--primary)] sm:text-lg md:text-xl md:tracking-[0.1em]">
               {w.dateHeading}
             </h3>
           </Reveal>
 
-          <Reveal variant="scale" delayMs={200} className="relative z-10 mt-2 w-full max-w-md px-2 sm:mt-3 md:mt-4">
+          <Reveal variant="scale" delayMs={200} className="flex w-full justify-center px-2 py-1">
             <img
               src={w.decorativeImage}
               alt=""
-              className="pointer-events-none mx-auto h-auto w-full max-w-[17rem] object-contain sm:max-w-xs md:max-w-sm"
+              className="pointer-events-none h-auto w-full max-w-[19rem] object-contain opacity-95 mix-blend-lighten sm:max-w-[22rem] md:max-w-[26rem]"
             />
           </Reveal>
 
-          <Reveal delayMs={300} className="relative z-10 mt-2 w-full max-w-xl px-1 sm:mt-3 md:mt-4">
+          <Reveal delayMs={300} className="w-full max-w-xl px-1">
             <h1 className="font-script text-4xl leading-none text-[var(--primary)] sm:text-6xl md:text-7xl">{w.eventName}</h1>
             <div className="mt-0.5 flex justify-center opacity-85 md:mt-2"><BirdDivider /></div>
 
