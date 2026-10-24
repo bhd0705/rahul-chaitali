@@ -24,7 +24,7 @@ export function WeddingSection({ config }: { config: WeddingConfig }) {
         cream / blue / cream.
         Only the date, church image, time and venue belong in the blue band.
       */}
-      <div className="relative mx-auto grid min-h-[100svh] w-full max-w-5xl grid-rows-[27%_46%_27%] px-3 text-center sm:px-6 sm:grid-rows-[25%_50%_25%] md:px-8">
+      <div className="relative mx-auto grid min-h-[100svh] w-full max-w-5xl grid-rows-[33%_45%_22%] px-3 text-center sm:px-6 sm:grid-rows-[33%_45%_22%] md:grid-rows-[25%_50%_25%] md:px-8">
         {/* Top cream band: heading only */}
         <Reveal
           variant="down"
